@@ -1,0 +1,312 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto:wght@300&display=swap');
+:root {
+  --color-white: #FFF;
+  --color-grey: #d0d0d4;
+  --color-yellow: #FFC03A;
+  --color-purple: #48487F;
+  --color-purple-dark: #393965;
+  --background-body: #F4F0FF;
+  --section-color: #151515;
+  --navbar-color: #FFF;
+  --navbar-transparent: rgba(255, 255, 255, 0.6);
+  --footer-color: var(--color-blue);
+  --footer-color-text: #FFF;
+  --card-color: #FFF;
+  --border-color: #EBEBEB;
+  --border-radius: 8px;
+  --box-shadow: 0 0 2rem 0 rgb(41 48 66 / 10%);
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--background-body);
+  overflow-x: hidden
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all .3s ease
+}
+/*::selection {
+  color: #FFF;
+  background-color: var(--color-red)
+}*/
+textarea {
+  resize: none
+}
+
+/*---- =======================
+NAVBAR START ----*/
+nav.navbar {
+  min-height: 5rem;
+  background-color: var(--navbar-color);
+  transition: .3s
+}
+nav.navbar.scrolled {
+  background-color: var(--navbar-transparent);
+  box-shadow: var(--box-shadow);
+  backdrop-filter: blur(15px);
+}
+nav.navbar > .container > .navbar-brand {
+  margin-right: 1.5rem
+}
+nav.navbar > .container > .navbar-brand > img {
+  width: 3rem
+}
+nav.navbar > .container > .navbar-collapse > .navbar-nav > li > .nav-link {
+  text-transform: uppercase;
+  transition: .3s
+}
+nav.navbar > .container > .navbar-collapse > .navbar-nav > li > .nav-link.active,
+nav.navbar > .container > .navbar-collapse > .navbar-nav > li > .nav-link:hover {
+  color: var(--color-purple);
+  font-weight: bold
+}
+/*---- =======================
+NAVBAR END ------*/
+
+/*---- =======================
+MAIN START ------*/
+main {
+  width: 100%;
+  margin-top: 6rem
+}
+/*---- =======================
+MAIN END --------*/
+
+/*---- =======================
+SECTION START ---*/
+section.section-title {
+  padding: 2rem 0
+}
+section.section-title h2 {
+  margin-bottom: .6rem;
+  color: var(--section-color);
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-transform: uppercase
+}
+section.section-title h2::after {
+  content: "";
+  width: 7.5rem;
+  height: .2rem;
+  margin: .25rem .625rem;
+  display: inline-block;
+  background: var(--color-yellow)
+}
+section.section-title p {
+  margin: 0;
+  margin: 0;
+  color: var(--section-color);
+  font-size: 1rem
+}
+section.section-home,
+section.section-home > .section-home-overlay {
+  width: 100%;
+  height: 80vh
+}
+section.section-home {
+  position: relative;
+  display: flex;
+  background: url(../images/home/principal.png) top center;
+  background-size: cover
+}
+section.section-home > .section-home-overlay {
+  position: absolute;
+  background: linear-gradient(135deg, rgba(61, 64, 91, 0.4) 0%, rgba(61, 64, 91, 0.95) 100%)
+}
+section.section-home > .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 1
+}
+section.section-home > .container > .section-home-info > h3 {
+  color: var(--color-yellow);
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-transform: uppercase
+}
+section.section-home > .container > .section-home-info > h1 {
+  color: var(--color-yellow);
+  font-size: 3rem;
+  font-weight: bold
+}
+section.section-home > .container > .section-home-info > p {
+  color: var(--color-white);
+  font-size: 1.4rem
+}
+/*---- =======================
+SECTION END -----*/
+
+/*---- =======================
+ARTICLE START ---*/
+article > .card-content {
+  padding: 4rem 0
+}
+/*---- =======================
+ARTICLE END -----*/
+
+/*---- =======================
+CONTATO START ---*/
+article > .card-content.contato i {
+  width: 2.4rem;
+  height: 2.4rem;
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  background: var(--color-yellow);
+  color: #151515;
+  border-radius: 50%
+}
+article > .card-content.contato h4 {
+  margin-bottom: 0;
+  margin-left: 60px;
+  color: #151515;
+  font-size: 16px;
+  font-weight: 600
+}
+article > .card-content.contato p {
+  margin-bottom: 0;
+  margin-left: 60px;
+  font-size: 14px;
+  color: #484848;
+}
+article > .card-content.contato .endereco > iframe {
+  width: 100%;
+  height: 25rem;
+  border: 0;
+  border-radius: .25rem
+}
+/*---- =======================
+CONTATO END -----*/
+
+/*---- =======================
+SOBRE START -----*/
+article > .card-content .timeline-with-icons {
+  position: relative;
+  margin-left: 1rem;
+  list-style: none;
+  border-left: 1px solid hsl(0, 0%, 90%)
+}
+article > .card-content .timeline-with-icons > .timeline-item {
+  position: relative;
+  margin-bottom: 4rem
+}
+article > .card-content .timeline-with-icons > .timeline-item:after {
+  position: absolute;
+  top: 0;
+  display: block
+}
+article > .card-content .timeline-with-icons > .timeline-item > .timeline-icon {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  left: -49px;
+  background-color: hsl(217, 88.2%, 90%);
+  color: hsl(217, 88.8%, 35.1%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%
+}
+/*---- =======================
+SOBRE END -------*/
+
+/*---- =======================
+FOOTER START ----*/
+footer {
+  margin-top: 1.4rem;
+  color: #FFF;
+  background-color: var(--color-purple)
+}
+footer h6 {
+  font-weight: 500
+}
+footer p {
+  margin-bottom: .6rem;
+}
+footer .footer-copyright {
+  padding: 1rem;
+  background-color: var(--color-purple-dark)
+}
+footer .footer-copyright .footer-social-button {
+  margin: .4rem;
+  color: #FFF;
+  font-size: 1.4rem;
+  text-decoration: none
+}
+footer .footer-copyright > .container > .row {
+  display: flex;
+  align-items: center
+}
+/*---- =======================
+FOOTER END ------*/
+
+/*---- =======================
+BACKGROUND START --*/
+.bg-blue {
+  background-color: var(--color-blue)
+}
+.bg-green {
+  background-color: var(--color-green)
+}
+.bg-grey {
+  background-color: var(--color-grey)
+}
+.bg-purple {
+  background-color: var(--color-purple)
+}
+.bg-red {
+  color: #FFF;
+  background-color: var(--color-red)
+}
+.bg-red-dark {
+  color: #FFF;
+  background-color: var(--color-red-dark)
+}
+.bg-red-dark .card-title {
+  text-align: center;
+  color: var(--color-yellow)
+}
+.bg-yellow {
+  background-color: var(--color-yellow)
+}
+/*---- =======================
+BACKGROUND END ----*/
+
+/*---- =======================
+CARD BOX START ----*/
+.card-box {
+  border: none;
+  border-radius: var(--border-radius)
+}
+.card-box img {
+  border-radius: var(--border-radius)
+}
+/*---- =======================
+CARD BOX END ------*/
+
+/*---- =======================
+LIST START --------*/
+.list-group-item.ingresso-passaporte {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.list-group-item.ingresso-passaporte > .input-number-group {
+  max-width: 8rem
+}
+.list-group-item.ingresso-passaporte > .input-number-group > .input-number {
+  text-align: center
+}
+/*---- =======================
+LIST END ----------*/

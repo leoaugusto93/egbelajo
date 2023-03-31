@@ -1,0 +1,31 @@
+/**** =======================
+@MEDIA 768px START ****/
+@media only screen and (max-width: 768px) {
+
+    /*---- =======================
+    SECTION START ---*/
+    section.section-home,
+    section.section-home > .section-home-overlay {
+      height: 60vh;
+      text-align: center;
+    }
+    section.section-home > .container > .section-home-info {
+        width: 100%
+    }
+    section.section-home > .container > .section-home-info > h3 {
+        font-size: 1rem
+    }
+    section.section-home > .container > .section-home-info > h1 {
+    font-size: 2rem
+    }
+    section.section-home > .container > .section-home-info > p {
+        font-size: 1rem
+    }
+    section.section-home > .container > .section-home-img {
+        display: none
+    }
+    /*---- =======================
+    SECTION END -----*/
+}
+/**** =======================
+@media 768px END ******/
